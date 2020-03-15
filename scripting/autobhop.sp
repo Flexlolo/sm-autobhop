@@ -12,8 +12,8 @@ INCLUDES
 #include <sourcemod>
 #include <clientprefs>
 #include <sdktools>
-#include <morecolors>
 #include <lololib>
+#include <printqueue>
 
 /*
 PLUGIN INFO
@@ -134,11 +134,11 @@ public Action Command_Bhop(int client, int args)
 
 			if (g_iCookie[client] & 1<<Cookie_Usage)
 			{
-				CPrintToChat(client, "%s %sEnabled.", CHAT_AUTOBHOP, CHAT_TEXT);
+				QPrintToChat(client, "%s %sEnabled.", CHAT_AUTOBHOP, CHAT_TEXT);
 			}
 			else
 			{
-				CPrintToChat(client, "%s %sDisabled.", CHAT_AUTOBHOP, CHAT_TEXT);
+				QPrintToChat(client, "%s %sDisabled.", CHAT_AUTOBHOP, CHAT_TEXT);
 			}
 		}
 	}
@@ -156,11 +156,11 @@ public Action Command_BhopFix(int client, int args)
 
 			if (g_iCookie[client] & 1<<Cookie_Fix)
 			{
-				CPrintToChat(client, "%s %sScroll fix enabled.", CHAT_AUTOBHOP, CHAT_TEXT);
+				QPrintToChat(client, "%s %sScroll fix enabled.", CHAT_AUTOBHOP, CHAT_TEXT);
 			}
 			else
 			{
-				CPrintToChat(client, "%s %sScroll fix disabled.", CHAT_AUTOBHOP, CHAT_TEXT);
+				QPrintToChat(client, "%s %sScroll fix disabled.", CHAT_AUTOBHOP, CHAT_TEXT);
 			}
 		}
 	}
