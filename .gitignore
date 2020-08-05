@@ -19,4 +19,4 @@
 !translations/
 !translations/**
 
-!build.sh
+!dependencies.txt
